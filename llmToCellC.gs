@@ -38,6 +38,16 @@ function LLMC(inputText, systemPrompt, userPromptStructure = "", assistantStart 
   if (!apiKey) {
     throw new Error('Claude API key not set. Please visit the "LLM Menu > APIs Setup" menu to set your API key.');
   }
+  
+  // Validate and set default values for all parameters
+  inputText = inputText || "";
+  systemPrompt = systemPrompt || "";
+  userPromptStructure = userPromptStructure || "";
+  assistantStart = assistantStart || "";
+  stopSequences = Array.isArray(stopSequences) ? stopSequences : [];
+  model = model || 'claude-3-7-sonnet-20250219';
+  max_tokens = Number(max_tokens) || 1024;
+  temperature = Number(temperature) >= 0 ? Number(temperature) : 0;
 
   // Prepare messages array
   const messages = [];
