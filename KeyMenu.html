@@ -1,0 +1,85 @@
+<!--
+KeyMenu.html 
+/**
+ * Google Sheets LLM Integration
+ * API key management for Google Sheets integration
+ * 
+ * Copyright (C) 2025
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-on.css">
+</head>
+<body>
+  <div class="sidebar branding-below">
+    <form>
+      <div class="block">
+        <label for="openaiKey">OpenAI API Key</label>
+        <input type="password" id="openaiKey" class="input-field">
+      </div>
+      <div class="block">
+        <label for="claudeKey">Claude API Key</label>
+        <input type="password" id="claudeKey" class="input-field">
+      </div>
+      <div class="block">
+        <button type="button" class="blue" id="saveButton">Save</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    document.getElementById('saveButton').addEventListener('click', saveApiKeys);
+
+    function saveApiKeys() {
+      const openaiKey = document.getElementById('openaiKey').value;
+      const claudeKey = document.getElementById('claudeKey').value;
+      let savedSuccessfully = true;
+
+      if (openaiKey) {
+        google.script.run
+          .withSuccessHandler(function() {
+            console.log('OpenAI API key saved successfully');
+          })
+          .withFailureHandler(function(error) {
+            console.error('Failed to save OpenAI API key:', error);
+            savedSuccessfully = false;
+          })
+          .saveApiKey(openaiKey, 'openai');
+      }
+
+      if (claudeKey) {
+        google.script.run
+          .withSuccessHandler(function() {
+            console.log('Claude API key saved successfully');
+          })
+          .withFailureHandler(function(error) {
+            console.error('Failed to save Claude API key:', error);
+            savedSuccessfully = false;
+          })
+          .saveApiKey(claudeKey, 'claude');
+      }
+
+      
+      google.script.host.close();
+      google.script.run.withSuccessHandler(function() {
+          SpreadsheetApp.getUi().alert('API keys saved successfully!');
+      }).showSuccessMessage();
+    }
+  </script>
+</body>
+</html>
