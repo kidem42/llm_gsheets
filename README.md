@@ -7,10 +7,10 @@ Simple integration of OpenAI and Claude AI models with Google Sheets through cus
 1. Open your Google Sheet
 2. Go to Extensions > Apps Script
 3. Copy and paste the following files into your Apps Script project:
-   - `llmToCellO.js` (OpenAI integration)
-   - `llmToCellC.js` (Claude integration)
-   - `apiKeys.js` (API key management)
-   - `menuHandler.js` (UI menu creation)
+   - `llmToCellO.gs` (OpenAI integration)
+   - `llmToCellC.gs` (Claude integration)
+   - `apiKeys.gs` (API key management)
+   - `menuHandler.gs` (UI menu creation)
    - `KeyMenu.html` (API key setup interface)
 4. Save the project
 5. Refresh your Google Sheet
