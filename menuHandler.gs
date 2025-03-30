@@ -24,6 +24,8 @@ function onOpen() {
     ui.createMenu('LLM Menu')
       .addItem('APIs Setup', 'saveApiKeys')
       .addSeparator()
+      .addItem('Response generation', 'generateResponse')
+      .addSeparator()
       .addItem('About OpenAI (=LLM)', 'showOpenAIInfo')
       .addItem('About Claude (=LLMC)', 'showClaudeInfo')
       .addItem('Claude Documentation', 'showClaudeDocumentation')
