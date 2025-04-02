@@ -71,23 +71,24 @@ Parameters:
 1. Click on "LLM Menu > Response generation"
 2. Fill in the following cells in your sheet:
 
-   I3: Input text to process
-   K3: System prompt/instructions
-   L3: (Optional) User prompt structure with XML tags
-   M3: (Optional) Assistant's response start text
-   N3: (Optional) Stop sequences (comma-separated or JSON array)
-   O3: (Optional) Model name (default: claude-3-7-sonnet-20250219)
-   P3: (Optional) Max tokens (default: 1024)
-   Q3: (Optional) Temperature (default: 0)
+- I3: Input text to process
+- K3: System prompt/instructions
+- L3: (Optional) User prompt structure with XML tags
+- M3: (Optional) Assistant's response start text
+- N3: (Optional) Stop sequences (comma-separated or JSON array)
+- O3: (Optional) Model name (default: claude-3-7-sonnet-20250219)
+- P3: (Optional) Max tokens (default: 1024)
+- Q3: (Optional) Temperature (default: 0)
 
 
-3. The generated response will appear in cell I23
+4. The generated response will appear in cell I23
 
 This method is particularly useful when:
-   You need to process multiple inputs in sequence
-   You want to keep a record of your prompts and responses
-   You prefer a visual interface over formula syntax
-   The layout can be configured for specific user tasks as needed
+- You need to process multiple inputs in sequence
+- You want to keep a record of your prompts and responses
+- You prefer a visual interface over formula syntax
+- The layout can be configured for specific user tasks as needed
+
 This approach helps bypass the cell content limitations (below 2048 tokens) when using formulas, providing a significantly higher token threshold
 
 ## Additional Information
