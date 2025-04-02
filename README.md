@@ -101,7 +101,7 @@ Access documentation through the menu: "LLM Menu > About OpenAI" or "LLM Menu > 
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License, Version 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ### Dependencies and Licenses
 
@@ -116,11 +116,14 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
    - [Terms of Service](https://www.anthropic.com/terms)
 
 3. This project
-   - Licensed under GNU General Public License v3.0
+   - Copyright (c) 2025 Pavel Kravets
+   - Licensed under the Apache License, Version 2.0
    - See LICENSE file for details
 
 ### What this means for you:
 - You can freely use, modify, and distribute this software
-- If you distribute modified versions, they must also be under the GPL v3
+- You can use the code for commercial purposes
+- You can create and distribute closed source modifications
 - You must include the original copyright notice and license
-- The full license text is available at [gnu.org/licenses/gpl-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
+- You must state significant changes made to the code
+- The full license text is available at [apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
