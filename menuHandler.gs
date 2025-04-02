@@ -17,12 +17,24 @@
  * 
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * 
+ * Dependencies and Licenses:
+ * 1. Google Apps Script
+ *    - Copyright (c) Google LLC
+ *    - Licensed under the Apache License 2.0
+ *    - https://developers.google.com/apps-script/terms
+ * 
+ * 2. This project
+ *    - Licensed under GNU General Public License v3.0
+ *    - See LICENSE file for details
  */
 
 function onOpen() {
     var ui = SpreadsheetApp.getUi();
     ui.createMenu('LLM Menu')
       .addItem('APIs Setup', 'saveApiKeys')
+      .addSeparator()
+      .addItem('Response generation', 'generateResponse')
       .addSeparator()
       .addItem('About OpenAI (=LLM)', 'showOpenAIInfo')
       .addItem('About Claude (=LLMC)', 'showClaudeInfo')

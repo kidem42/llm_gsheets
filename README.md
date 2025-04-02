@@ -66,6 +66,31 @@ Parameters:
 - `max_tokens`: Maximum tokens to generate (optional, default: 1024)
 - `temperature`: Creativity setting 0-1 (optional, default: 0)
 
+### Alternative: Using Response Generator
+
+1. Click on "LLM Menu > Response generation"
+2. Fill in the following cells in your sheet:
+
+- I3: Input text to process
+- K3: System prompt/instructions
+- L3: (Optional) User prompt structure with XML tags
+- M3: (Optional) Assistant's response start text
+- N3: (Optional) Stop sequences (comma-separated or JSON array)
+- O3: (Optional) Model name (default: claude-3-7-sonnet-20250219)
+- P3: (Optional) Max tokens (default: 1024)
+- Q3: (Optional) Temperature (default: 0)
+
+
+4. The generated response will appear in cell I23
+
+This method is particularly useful when:
+- You need to process multiple inputs in sequence
+- You want to keep a record of your prompts and responses
+- You prefer a visual interface over formula syntax
+- The layout can be configured for specific user tasks as needed
+
+This approach helps bypass the cell content limitations (below 2048 tokens) when using formulas, providing a significantly higher token threshold
+
 ## Additional Information
 
 For more detailed documentation, see:
@@ -78,7 +103,23 @@ Access documentation through the menu: "LLM Menu > About OpenAI" or "LLM Menu > 
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
-What this means for you:
+### Dependencies and Licenses
+
+1. Google Apps Script
+   - Copyright (c) Google LLC
+   - Licensed under the Apache License 2.0
+   - [Terms of Service](https://developers.google.com/apps-script/terms)
+
+2. Anthropic Claude API
+   - Copyright (c) Anthropic
+   - Licensed under Anthropic's Terms of Service
+   - [Terms of Service](https://www.anthropic.com/terms)
+
+3. This project
+   - Licensed under GNU General Public License v3.0
+   - See LICENSE file for details
+
+### What this means for you:
 - You can freely use, modify, and distribute this software
 - If you distribute modified versions, they must also be under the GPL v3
 - You must include the original copyright notice and license
