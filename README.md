@@ -59,7 +59,7 @@ Full syntax:
 Parameters:
 - `inputText`: Content to process (required)
 - `systemPrompt`: Instructions for the model's role (required)
-- `userPromptStructure`: XML-tagged prompt with {inputText} placeholder (optional)
+- `userPromptStructure`: XML-tagged prompt with {inputText} placeholder (optional, not used in Response Generator)
 - `assistantStart`: Starting text for the response (optional)
 - `stopSequences`: Array of sequences to stop generation (optional)
 - `model`: Claude model to use (optional, default: "claude-3-7-sonnet-20250219")
@@ -72,13 +72,14 @@ Parameters:
 2. Fill in the following cells in your sheet:
 
 - I3: Input text to process
-- K3: System prompt/instructions
-- L3: (Optional) User prompt structure with XML tags
+- K3: System prompt/instructions (include role, instructions, and any other context for the model)
 - M3: (Optional) Assistant's response start text
 - N3: (Optional) Stop sequences (comma-separated or JSON array)
 - O3: (Optional) Model name (default: claude-3-7-sonnet-20250219)
 - P3: (Optional) Max tokens (default: 1024)
 - Q3: (Optional) Temperature (default: 0)
+
+> **Note**: The system prompt in K3 should contain all instructions for the model, including its role and any specific formatting requirements. The input text from I3 will be sent directly as the user message content.
 
 
 4. The generated response will appear in cell I23

@@ -45,9 +45,8 @@ function generateResponse() {
   var inputText = sheet.getRange("I3").getValue() || "";
   var systemPrompt = sheet.getRange("K3").getValue() || "";
   
-  // For optional parameters, check if cells are empty and use default values if they are
-  var userPromptStructureCell = sheet.getRange("L3").getValue();
-  var userPromptStructure = userPromptStructureCell ? userPromptStructureCell : "";
+  // For optional parameters, set userPromptStructure to empty string
+  var userPromptStructure = "";
   
   var assistantStartCell = sheet.getRange("M3").getValue();
   var assistantStart = assistantStartCell ? assistantStartCell : "";

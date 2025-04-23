@@ -21,7 +21,7 @@ LLMC(
 
 - **inputText** (required): The text to be processed by Claude
 - **systemPrompt** (required): System instructions for the model (similar to a role or persona)
-- **userPromptStructure** (optional): Structured prompt with XML tags. Use `{inputText}` as a placeholder for your input text
+- **userPromptStructure** (optional): Structured prompt with XML tags. Use `{inputText}` as a placeholder for your input text. Note: This parameter is not used in the Response Generator feature.
 - **assistantStart** (optional): Starting text for the assistant's response
 - **stopSequences** (optional): Array of sequences that will stop generation
 - **model** (optional): Claude model to use (default: 'claude-3-7-sonnet-20250219')
